@@ -1,0 +1,439 @@
+{
+  "@context" : {
+    "belongsTo" : {
+      "@id" : "https://w3id.org/i40/sto#belongsTo",
+      "@type" : "@id"
+    },
+    "namedIndividial" : {
+      "@id" : "http://www.w3.org/2002/07/owl#namedIndividial"
+    },
+    "alignesWith" : {
+      "@id" : "https://w3id.org/i40/sto#alignesWith",
+      "@type" : "@id"
+    },
+    "hasPublicationDate" : {
+      "@id" : "https://w3id.org/i40/sto#hasPublicationDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Unit" : {
+      "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
+    },
+    "wasGeneratedBy" : {
+      "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "thing" : {
+      "@id" : "http://xmlns.com/foaf/0.1/thing"
+    },
+    "Publication" : {
+      "@id" : "https://w3id.org/i40/sto#Publication"
+    },
+    "Technology" : {
+      "@id" : "https://w3id.org/i40/sto#Technology"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "StandardizationFramework" : {
+      "@id" : "https://w3id.org/i40/sto#StandardizationFramework"
+    },
+    "Country" : {
+      "@id" : "http://dbpedia.org/ontology#Country"
+    },
+    "relatedTo" : {
+      "@id" : "https://w3id.org/i40/sto#relatedTo",
+      "@type" : "@id"
+    },
+    "hasICS" : {
+      "@id" : "https://w3id.org/i40/sto#hasICS",
+      "@type" : "@id"
+    },
+    "Organization" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Organization"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "hasTag" : {
+      "@id" : "https://w3id.org/i40/sto#hasTag"
+    },
+    "hasStabilityDate" : {
+      "@id" : "https://w3id.org/i40/sto#hasStabilityDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#gYear"
+    },
+    "hasVersion" : {
+      "@id" : "http://purl.org/dc/terms/hasVersion"
+    },
+    "class" : {
+      "@id" : "http://www.w3.org/2002/07/owl#class"
+    },
+    "hasTargetConcern" : {
+      "@id" : "https://w3id.org/i40/hasTargetConcern",
+      "@type" : "@id"
+    },
+    "StandardPart" : {
+      "@id" : "https://w3id.org/i40/sto#StandardPart"
+    },
+    "maker" : {
+      "@id" : "http://xmlns.com/foaf/0.1/maker",
+      "@type" : "@id"
+    },
+    "hasTechnicalCommittee" : {
+      "@id" : "https://w3id.org/i40/sto#hasTechnicalCommittee",
+      "@type" : "@id"
+    },
+    "FiwareChapter" : {
+      "@id" : "https://w3id.org/i40/sto#FiwareChapter"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "stoPartName" : {
+      "@id" : "https://w3id.org/i40/sto#stoPartName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "domainName" : {
+      "@id" : "https://w3id.org/i40/sto#domainName",
+      "@type" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "isPartOf" : {
+      "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf",
+      "@type" : "@id"
+    },
+    "mbox" : {
+      "@id" : "http://xmlns.com/foaf/0.1/mbox",
+      "@type" : "@id"
+    },
+    "hasHeadquaterIn" : {
+      "@id" : "https://w3id.org/i40/sto#hasHeadquaterIn",
+      "@type" : "@id"
+    },
+    "familyName" : {
+      "@id" : "http://xmlns.com/foaf/0.1/familyName"
+    },
+    "hasClassification" : {
+      "@id" : "https://w3id.org/i40/sto#hasClassification",
+      "@type" : "@id"
+    },
+    "RAMILifeCycleLayer" : {
+      "@id" : "https://w3id.org/i40/rami#RAMILifeCycleLayer"
+    },
+    "ArchitectureDescription" : {
+      "@id" : "https://w3id.org/i40/sto#ArchitectureDescription"
+    },
+    "frames" : {
+      "@id" : "https://w3id.org/i40/sto#frames",
+      "@type" : "@id"
+    },
+    "repository" : {
+      "@id" : "http://usefulinc.com/ns/doap#repository"
+    },
+    "LinguisticSystem" : {
+      "@id" : "http://purl.org/dc/terms/LinguisticSystem"
+    },
+    "hasDBpediaResource" : {
+      "@id" : "https://w3id.org/i40/sto#hasDBpediaResource"
+    },
+    "hasEdition" : {
+      "@id" : "https://w3id.org/i40/sto#hasEdition",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "isMemberOf" : {
+      "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isMemberOf",
+      "@type" : "@id"
+    },
+    "ISA95Level" : {
+      "@id" : "https://w3id.org/i40/sto#ISA95Level"
+    },
+    "Measure" : {
+      "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "note" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#note"
+    },
+    "associatedWith" : {
+      "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith",
+      "@type" : "@id"
+    },
+    "hasTask" : {
+      "@id" : "https://w3id.org/i40/sto#hasTask",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "useStructureOf" : {
+      "@id" : "https://w3id.org/i40/sto#useStructureOf",
+      "@type" : "@id"
+    },
+    "Agent" : {
+      "@id" : "http://purl.org/dc/terms/Agent"
+    },
+    "hasWikipediaArticle" : {
+      "@id" : "https://w3id.org/i40/sto#hasWikipediaArticle"
+    },
+    "Domain" : {
+      "@id" : "https://w3id.org/i40/sto#Domain"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "Layer" : {
+      "@id" : "https://w3id.org/ids/ram/Layer"
+    },
+    "TechnicalSpecification" : {
+      "@id" : "https://w3id.org/i40/sto#TechnicalSpecification"
+    },
+    "hasMotivation" : {
+      "@id" : "https://w3id.org/i40/sto#hasMotivation",
+      "@type" : "@id"
+    },
+    "BdvaConcern" : {
+      "@id" : "https://w3id.org/i40/sto#BdvaConcern"
+    },
+    "isComponentOf" : {
+      "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isComponentOf",
+      "@type" : "@id"
+    },
+    "hasStatus" : {
+      "@id" : "https://w3id.org/i40/sto#hasStatus",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights"
+    },
+    "Error1" : {
+      "@id" : "http://org.semanticweb.owlapi/error#Error1"
+    },
+    "RAMIITLayer" : {
+      "@id" : "https://w3id.org/i40/rami#RAMIITLayer"
+    },
+    "isImplementationOf" : {
+      "@id" : "https://w3id.org/i40/sto#isImplementationOf",
+      "@type" : "@id"
+    },
+    "TechnicalCommittee" : {
+      "@id" : "https://w3id.org/i40/sto#TechnicalCommittee"
+    },
+    "hasNumericalValue" : {
+      "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue"
+    },
+    "isDescribedin" : {
+      "@id" : "https://w3id.org/i40/sto#isDescribedin",
+      "@type" : "@id"
+    },
+    "orgName" : {
+      "@id" : "https://w3id.org/i40/sto#orgName",
+      "@type" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Standard" : {
+      "@id" : "https://w3id.org/i40/sto#Standard"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "IIoTConsortium" : {
+      "@id" : "https://w3id.org/i40/sto#IIoTConsortium"
+    },
+    "property" : {
+      "@id" : "http://www.w3.org/2002/07/owl#property"
+    },
+    "attributionName" : {
+      "@id" : "http://creativecommons.org/ns#attributionName"
+    },
+    "Place" : {
+      "@id" : "http://dbpedia.org/ontology#Place"
+    },
+    "AdminShellSubmodel" : {
+      "@id" : "https://w3id.org/i40/rami#AdminShellSubmodel"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "Motivation" : {
+      "@id" : "http://purl.org/spar/deo/Motivation"
+    },
+    "definition" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#definition"
+    },
+    "hasFileSize" : {
+      "@id" : "https://w3id.org/i40/sto#hasFileSize",
+      "@type" : "@id"
+    },
+    "RAMIHierarchyLevel" : {
+      "@id" : "https://w3id.org/i40/rami#RAMIHierarchyLevel"
+    },
+    "Concern" : {
+      "@id" : "https://w3id.org/i40/sto#Concern"
+    },
+    "hasPublisher" : {
+      "@id" : "https://w3id.org/i40/sto#hasPublisher",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "ProductionSystemLifeCycle" : {
+      "@id" : "https://w3id.org/i40/sto#ProductionSystemLifeCycle"
+    },
+    "hasPreviousVersion" : {
+      "@id" : "https://w3id.org/i40/sto#hasPreviousVersion",
+      "@type" : "@id"
+    },
+    "hasObjective" : {
+      "@id" : "https://w3id.org/i40/sto#hasObjective",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "ProductDevelopmentLifeCycle" : {
+      "@id" : "https://w3id.org/i40/sto#ProductDevelopmentLifeCycle"
+    },
+    "LicenseDocument" : {
+      "@id" : "http://purl.org/dc/terms/LicenseDocument"
+    },
+    "uses" : {
+      "@id" : "https://w3id.org/i40/sto#uses",
+      "@type" : "@id"
+    },
+    "TechnicalReport" : {
+      "@id" : "https://w3id.org/i40/sto#TechnicalReport"
+    },
+    "FunctionalDomain" : {
+      "@id" : "http://example.org/iira#FunctionalDomain"
+    },
+    "attributionURL" : {
+      "@id" : "http://creativecommons.org/ns#attributionURL"
+    },
+    "StandardOrganization" : {
+      "@id" : "https://w3id.org/i40/sto#StandardOrganization"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Error2" : {
+      "@id" : "http://org.semanticweb.owlapi/error#Error2"
+    },
+    "hasUnit" : {
+      "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit",
+      "@type" : "@id"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/terms/date"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "ConnectivityLayer" : {
+      "@id" : "https://w3id.org/i40/sto#ConnectivityLayer"
+    },
+    "SystemCharacteristics" : {
+      "@id" : "http://example.org/iira#SystemCharacteristics"
+    },
+    "Entity" : {
+      "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
+    },
+    "Viewpoint" : {
+      "@id" : "https://w3id.org/i40/sto#Viewpoint"
+    },
+    "hasDomain" : {
+      "@id" : "https://w3id.org/i40/sto#hasDomain",
+      "@type" : "@id"
+    },
+    "hasDeveloper" : {
+      "@id" : "https://w3id.org/i40/sto#hasDeveloper",
+      "@type" : "@id"
+    },
+    "abbreviation" : {
+      "@id" : "https://w3id.org/i40/sto#abbreviation",
+      "@type" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "hasPages" : {
+      "@id" : "https://w3id.org/i40/sto#hasPages",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "InternationalClassificationForStandards" : {
+      "@id" : "https://w3id.org/i40/sto#InternationalClassificationForStandards"
+    },
+    "hasImplementationFormat" : {
+      "@id" : "https://w3id.org/i40/sto#hasImplementationFormat",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "hasOntology" : {
+      "@id" : "https://w3id.org/i40/sto#hasOntology",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Document" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Document"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/terms/language",
+      "@type" : "@id"
+    },
+    "hasOfficialResource" : {
+      "@id" : "https://w3id.org/i40/sto#hasOfficialResource",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "CrosscuttingFunction" : {
+      "@id" : "http://example.org/iira#CrosscuttingFunction"
+    },
+    "StandardClassification" : {
+      "@id" : "https://w3id.org/i40/sto#StandardClassification"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "BusinessCycleSCM" : {
+      "@id" : "https://w3id.org/i40/sto#BusinessCycleSCM"
+    },
+    "formationDate" : {
+      "@id" : "https://w3id.org/i40/sto#formationDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "relation" : {
+      "@id" : "http://purl.org/dc/elements/1.1/relation"
+    },
+    "Perspective" : {
+      "@id" : "http://w3id.org/ids/ram/Perspective"
+    },
+    "hasAvailableLanguage" : {
+      "@id" : "https://w3id.org/i40/sto#hasAvailableLanguage",
+      "@type" : "@id"
+    },
+    "Collection" : {
+      "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"
+    }
+  }
+}

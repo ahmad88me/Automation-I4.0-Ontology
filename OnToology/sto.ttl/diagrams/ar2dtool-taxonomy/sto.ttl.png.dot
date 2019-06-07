@@ -1,0 +1,31 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "foaf:Document" "rami:AdminShellSubmodel" ":Perspective" "iira:SystemCharacteristics" "sto:ProductDevelopmentLifeCycle" "rami:RAMILifeCycleLayer" "sto:ISA95Level" "sto:TechnicalSpecification" "sto:Standard" "sto:ConnectivityLayer" "foaf:Organization" "sto:TechnicalReport" "sto:StandardOrganization" "sto:ProductionSystemLifeCycle" "iira:FunctionalDomain" "sto:StandardPart" "rami:RAMIITLayer" "sto:ArchitectureDescription" "sto:StandardizationFramework" "sto:FiwareChapter" "sto:BusinessCycleSCM" "sto:IIoTConsortium" "sto:StandardClassification" "rami:RAMIHierarchyLevel" "iira:CrosscuttingFunction" "idsram:Layer" ; /*classes style*/
+	"iira:CrosscuttingFunction" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"rami:RAMIHierarchyLevel" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"iira:FunctionalDomain" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"rami:RAMIITLayer" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"sto:ArchitectureDescription" -> "sto:StandardizationFramework" [ label = "rdfs:subClassOf" ];
+	"sto:StandardOrganization" -> "foaf:Organization" [ label = "rdfs:subClassOf" ];
+	"sto:ConnectivityLayer" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"rami:RAMILifeCycleLayer" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"sto:Viewpoint" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"sto:BdvaConcern" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"sto:TechnicalReport" -> "sto:Publication" [ label = "rdfs:subClassOf" ];
+	"sto:Publication" -> "foaf:Document" [ label = "rdfs:subClassOf" ];
+	"sto:ISA95Level" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"sto:ProductDevelopmentLifeCycle" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"sto:TechnicalSpecification" -> "sto:Publication" [ label = "rdfs:subClassOf" ];
+	"iira:SystemCharacteristics" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	":Perspective" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"sto:StandardPart" -> "sto:Publication" [ label = "rdfs:subClassOf" ];
+	"sto:BusinessCycleSCM" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"sto:FiwareChapter" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"sto:ProductionSystemLifeCycle" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"sto:IIoTConsortium" -> "foaf:Organization" [ label = "rdfs:subClassOf" ];
+	"idsram:Layer" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"rami:AdminShellSubmodel" -> "sto:StandardClassification" [ label = "rdfs:subClassOf" ];
+	"sto:Standard" -> "sto:Publication" [ label = "rdfs:subClassOf" ];
+
+}
