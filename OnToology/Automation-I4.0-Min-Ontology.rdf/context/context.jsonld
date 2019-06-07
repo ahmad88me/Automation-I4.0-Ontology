@@ -1,0 +1,561 @@
+{
+  "@context" : {
+    "TransitionFunction" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#TransitionFunction"
+    },
+    "isContextStandard" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isContextStandard",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "executes" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#executes",
+      "@type" : "@id"
+    },
+    "concernsTo" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#concernsTo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ManyToOneTransition" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#ManyToOneTransition"
+    },
+    "hasSinkPoint" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasSinkPoint",
+      "@type" : "@id"
+    },
+    "hasReceiver" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasReceiver",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "runsAService" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#runsAService",
+      "@type" : "@id"
+    },
+    "UnidirectionalArc" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#UnidirectionalArc"
+    },
+    "isActive" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isActive",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "providesInformationToState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#providesInformationToState",
+      "@type" : "@id"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "Sequence" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Sequence"
+    },
+    "hasNumberOfAssignment" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasNumberOfAssignment",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "hasReturnDataType" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasReturnDataType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "actsOver" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#actsOver",
+      "@type" : "@id"
+    },
+    "ensures" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#ensures",
+      "@type" : "@id"
+    },
+    "Representation" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Representation"
+    },
+    "hasSoftwareContent" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasSoftwareContent",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AnalogVariable" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#AnalogVariable"
+    },
+    "NextState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#NextState"
+    },
+    "hasNumberOfParameters" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasNumberOfParameters",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Thing" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Thing"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "hasContent" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasContent",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
+    "BidirectionalArc" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#BidirectionalArc"
+    },
+    "isConnectedToArc" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isConnectedToArc",
+      "@type" : "@id"
+    },
+    "InitialState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#InitialState"
+    },
+    "receivesDataStream" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#receivesDataStream",
+      "@type" : "@id"
+    },
+    "hasPreviousState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasPreviousState",
+      "@type" : "@id"
+    },
+    "belongsToSubsequence" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#belongsToSubsequence",
+      "@type" : "@id"
+    },
+    "Transition" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Transition"
+    },
+    "DiscreteDynamicsModel" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#DiscreteDynamicsModel"
+    },
+    "hasValue" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasValue"
+    },
+    "isImplementedBy" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isImplementedBy",
+      "@type" : "@id"
+    },
+    "readsAbout" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#readsAbout",
+      "@type" : "@id"
+    },
+    "Process_" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Process_"
+    },
+    "isContextVariableOf" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isContextVariableOf",
+      "@type" : "@id"
+    },
+    "FinalState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#FinalState"
+    },
+    "isChildSetElement" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isChildSetElement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasIdentifier" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasIdentifier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "contains" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#contains",
+      "@type" : "@id"
+    },
+    "hasEmbeddingCapability" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasEmbeddingCapability",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "compliesSyntacticInteroperability" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#compliesSyntacticInteroperability",
+      "@type" : "@id"
+    },
+    "MultivariableTransitionFunction" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#MultivariableTransitionFunction"
+    },
+    "isParentSetElement" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isParentSetElement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "isExecutedBy" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isExecutedBy",
+      "@type" : "@id"
+    },
+    "SynchronousState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#SynchronousState"
+    },
+    "repository" : {
+      "@id" : "http://usefulinc.com/ns/doap#repository"
+    },
+    "hasDBpediaResource" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasDBpediaResource"
+    },
+    "isComposedBy" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isComposedBy",
+      "@type" : "@id"
+    },
+    "Interoperability" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Interoperability"
+    },
+    "belongsToSequence" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#belongsToSequence",
+      "@type" : "@id"
+    },
+    "hasNumberOfTransitions" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasNumberOfTransitions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "AnalogOutput" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#AnalogOutput"
+    },
+    "DigitalVariable" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#DigitalVariable"
+    },
+    "defines" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#defines",
+      "@type" : "@id"
+    },
+    "Person" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Person"
+    },
+    "ManyToManyTransition" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#ManyToManyTransition"
+    },
+    "AnalogInput" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#AnalogInput"
+    },
+    "hasNumberOfStates" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasNumberOfStates",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Actor" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Actor"
+    },
+    "SetElement" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#SetElement"
+    },
+    "Domain" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Domain"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "SoftwareResource" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#SoftwareResource"
+    },
+    "hasNumberOfTasks" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasNumberOfTasks",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "Product-Asset" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Product-Asset"
+    },
+    "MultivariableStateFunction" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#MultivariableStateFunction"
+    },
+    "As-a-ServiceFunction" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#As-a-ServiceFunction"
+    },
+    "DigitalOutput" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#DigitalOutput"
+    },
+    "Subloop" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Subloop"
+    },
+    "returnsResult" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#returnsResult",
+      "@type" : "@id"
+    },
+    "initializesSequence" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#initializesSequence",
+      "@type" : "@id"
+    },
+    "isConnectedToState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isConnectedToState",
+      "@type" : "@id"
+    },
+    "initializesLoop" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#initializesLoop",
+      "@type" : "@id"
+    },
+    "DataInput" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#DataInput"
+    },
+    "hasReturnValue" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasReturnValue"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights"
+    },
+    "hasInteroperabilityDegree" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasInteroperabilityDegree",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isPerformedBy" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isPerformedBy",
+      "@type" : "@id"
+    },
+    "generates" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#generates",
+      "@type" : "@id"
+    },
+    "SemanticInteroperability" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#SemanticInteroperability"
+    },
+    "Information" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Information"
+    },
+    "Protocol" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Protocol"
+    },
+    "Network" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Network"
+    },
+    "hasNextState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasNextState",
+      "@type" : "@id"
+    },
+    "Input" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Input"
+    },
+    "Standard" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Standard"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "Arc" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Arc"
+    },
+    "ModelElement" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#ModelElement"
+    },
+    "compliesSemanticInteroperability" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#compliesSemanticInteroperability",
+      "@type" : "@id"
+    },
+    "callsAService" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#callsAService",
+      "@type" : "@id"
+    },
+    "Semantics" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Semantics"
+    },
+    "SyntacticInteroperability" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#SyntacticInteroperability"
+    },
+    "transmits" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#transmits",
+      "@type" : "@id"
+    },
+    "DataStream" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#DataStream"
+    },
+    "hasModelElement" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasModelElement",
+      "@type" : "@id"
+    },
+    "establishes" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#establishes",
+      "@type" : "@id"
+    },
+    "hasTransmitter" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasTransmitter",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "StateFunction" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#StateFunction"
+    },
+    "initializesSubsequence" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#initializesSubsequence",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "finalizesLoop" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#finalizesLoop",
+      "@type" : "@id"
+    },
+    "hasCharacteristic" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasCharacteristic",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasAssociatedModel" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasAssociatedModel",
+      "@type" : "@id"
+    },
+    "Architecture" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Architecture"
+    },
+    "hasStateFunction" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasStateFunction",
+      "@type" : "@id"
+    },
+    "understands" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#understands",
+      "@type" : "@id"
+    },
+    "standardizes" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#standardizes",
+      "@type" : "@id"
+    },
+    "CurrentState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#CurrentState"
+    },
+    "Variable" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Variable"
+    },
+    "hasDataType" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasDataType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "DataOutput" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#DataOutput"
+    },
+    "Entity" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Entity"
+    },
+    "hasResource" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasResource",
+      "@type" : "@id"
+    },
+    "OneToManyTransition" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#OneToManyTransition"
+    },
+    "hasDomain" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasDomain",
+      "@type" : "@id"
+    },
+    "spreads" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#spreads",
+      "@type" : "@id"
+    },
+    "Language" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Language"
+    },
+    "State" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#State"
+    },
+    "DigitalInput" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#DigitalInput"
+    },
+    "Resource" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Resource"
+    },
+    "Output" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Output"
+    },
+    "Function" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Function"
+    },
+    "AdvancedFunction" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#AdvancedFunction"
+    },
+    "executesAServiceFunction" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#executesAServiceFunction",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "OneToOneTransition" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#OneToOneTransition"
+    },
+    "Service" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Service"
+    },
+    "hasSourcePoint" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasSourcePoint",
+      "@type" : "@id"
+    },
+    "interacts" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#interacts",
+      "@type" : "@id"
+    },
+    "hasOfficialResource" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasOfficialResource"
+    },
+    "Loop" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Loop"
+    },
+    "finalizesSequence" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#finalizesSequence",
+      "@type" : "@id"
+    },
+    "RequestFunction" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#RequestFunction"
+    },
+    "requires" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#requires",
+      "@type" : "@id"
+    },
+    "Device" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Device"
+    },
+    "receivesParameter" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#receivesParameter",
+      "@type" : "@id"
+    },
+    "Subsequence" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Subsequence"
+    },
+    "formalizes" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#formalizes",
+      "@type" : "@id"
+    },
+    "hasDescription" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasDescription",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "PreviousState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#PreviousState"
+    },
+    "hasTransitionFunction" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#hasTransitionFunction",
+      "@type" : "@id"
+    },
+    "isConnectedToTransition" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isConnectedToTransition",
+      "@type" : "@id"
+    },
+    "Resource-SharedState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#Resource-SharedState"
+    },
+    "finalizesSubsequence" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#finalizesSubsequence",
+      "@type" : "@id"
+    },
+    "receives" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#receives",
+      "@type" : "@id"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "isNormalizedBy" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isNormalizedBy",
+      "@type" : "@id"
+    },
+    "isEnabled" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#isEnabled",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "offers" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#offers",
+      "@type" : "@id"
+    },
+    "DataVariable" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#DataVariable"
+    },
+    "belongsToArchitectureLevel" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#belongsToArchitectureLevel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ConcurrentState" : {
+      "@id" : "http://www.semanticweb.org/Automation-I4.0-Ontology#ConcurrentState"
+    }
+  }
+}
